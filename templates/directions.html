@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Directions{% endblock %}
+{% block content %}
+
+<div id="directions">	
+	<div id="map_canvas"></div>
+	
+	<div id="address">
+		<form>
+		<p>
+		Starting Address: 
+		<input id="address" name="address" type="text" size="40" />
+		<input type="button" value="Get Directions" onclick="calcRoute(this.form)" />
+		</p>
+		</form>
+		
+		<div id="directionsPanel"></div>
+	</div>
+
+</div>	
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Menu{% endblock %}
+{% block content %}
+
+<ul id="menu_nav">
+	
+	<li><a title="Appetizers" href="/menu/Appetizers">Appetizers</a></li>
+	<li><a title="Burgers" href="/menu/Burgers">Burgers</a></li>
+	<li><a title="Sandwiches" href="/menu/Sandwiches">Sandwiches</a></li>
+</ul>
+<div id="menu">
+	<h2>{{ category }}</h2>
+		{% for cat in categories %}
+		<p><span id="details"> {{ cat.name }} - {{ cat.price  }} </span></p>
+		<p>	{{ cat.description }} </p>
+	{% endfor %}
+	
+</div> <!-- End menu division -->
+{% endblock %}
